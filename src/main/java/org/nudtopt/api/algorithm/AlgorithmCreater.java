@@ -6,7 +6,6 @@
 //import org.nudtopt.api.algorithm.rule.*;
 //import org.nudtopt.api.model.MainLogger;
 //import org.nudtopt.api.tool.function.Tool;
-//import org.nudtopt.realworldproblems.apiforsatellite.algorithm.PriorityRule;
 //
 //import java.util.Random;
 //
@@ -82,7 +81,6 @@
 //            case "优选排序算法":      algorithm = new BestFit();          break;
 //            case "随机分配算法":      algorithm = new RandomFit();        break;
 //            case "随机无约束分配":    algorithm = new RandomAllocate();   break;
-//            case "快速优先级规则":    algorithm = new PriorityRule();     break;
 //        }
 //        maxRunTime = (long)(maxRunTime * (1 - Tool.random() * 0.15));   // 根据最大时间概率折减
 //        algorithm.setMaxRunTime(maxRunTime);
