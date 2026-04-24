@@ -1,4 +1,4 @@
-<img src="./README/联系方式.png"  width="380" />
+<img src="./README/NOPT介绍图.png"  />
 # 工程级组合优化求解器NOPT(beta)
 
 ### 🚀 项目亮点 (Key Features)
