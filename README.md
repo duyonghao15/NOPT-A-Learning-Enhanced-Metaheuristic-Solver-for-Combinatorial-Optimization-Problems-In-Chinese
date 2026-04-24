@@ -1,4 +1,4 @@
-![alt text](https://gitee.com/duyonghao15/NOPT/raw/master/README/NOPT%E4%BB%8B%E7%BB%8D%E5%9B%BE.png)
+<img src="./README/联系方式.png"  width="380" />
 # 工程级组合优化求解器NOPT(beta)
 
 ### 🚀 项目亮点 (Key Features)
