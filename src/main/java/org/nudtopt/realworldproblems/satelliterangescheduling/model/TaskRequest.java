@@ -14,9 +14,9 @@ public class TaskRequest implements Serializable {
     private long earlistTime = 0;               // 最早时间
     private long deadline = 9999999;            // 最晚时间
 
-    private List<String> expandList   = Arrays.asList("普通", "扩频1", "扩频2");                              // 要求扩频 (普通、扩频1、扩频2)
-    private List<String> functionList = Arrays.asList("测距", "测速", "测角", "遥测", "遥控", "数传", "话音");  // 要求测控功能
-    private List<String> frequentList = Arrays.asList("S", "C", "Ku", "Ka", "VHF");                         // 要求测控频段
+    private List<String> expandList   = new ArrayList<>();    // 要求扩频
+    private List<String> functionList = new ArrayList<>();    // 要求测控功能
+    private List<String> frequentList = new ArrayList<>();    // 要求测控频段
 
     private String orbitType;                   // 要求轨道类型(入境圈, 中间圈, 出境圈, 或无要求)
 
