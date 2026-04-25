@@ -18,7 +18,7 @@ public class Mutation {
             double[][] decisionMatrix = solutionList.get(i).getDecisionMatrix();                  // 2. 当前决策矩阵
             double[][] mutatedMatrix = climbingMutation(decisionMatrix, num, realSolution);       // 3. 变异后的决策矩阵
             Solution mutatedSolution = realSolution.matrixClone(mutatedMatrix);                   // 4. 基于决策矩阵创建新的shadow solution
-            solutionList.set(i, mutatedSolution);                                                 // 5. 替换solution list中的
+            if (mutatedSolution.getScore().compareTo(solutionList.get(i).getScore()) > 0) solutionList.set(i, mutatedSolution);  // 5. 判断是否相同，加入到种群
         }
         return solutionList;
     }
@@ -34,7 +34,9 @@ public class Mutation {
     public static double[][] climbingMutation(double[][] decisionMatrix, int iteration, Solution realSolution) {
         realSolution.decode(decisionMatrix);                              // 1. 基于决策矩阵编码, 获得实例solution
         realSolution.updateScore();
-        new HillClimbing().run(realSolution, iteration);                  // 2. 调用爬山算法, solution不断优化(传参不变)
+        realSolution.setDecisionMatrix(null);
+        new HillClimbing().run(realSolution, iteration, 0);        // 2. 调用爬山算法, solution不断优化(传参不变)
+        realSolution.encode();
         return Tool.clone(realSolution.getDecisionMatrix());              // 3. 爬山结束, 基于当前solution, 返回最新决策矩阵(克隆)
     }
 

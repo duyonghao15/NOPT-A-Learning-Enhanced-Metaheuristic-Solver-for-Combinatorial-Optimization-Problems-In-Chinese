@@ -5,13 +5,12 @@ import org.nudtopt.api.model.DecisionVariable;
 import org.nudtopt.api.model.Solution;
 import org.nudtopt.api.tool.function.Tool;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
-public class RandomMove extends Move {
-
+/**
+ * 不随机，循环移动决策变量
+ */
+public class SequenceMove extends Move {
     @Override
     public Operator moveAndScore(Solution solution, List<Operator> tabuList) {
         Move move;
@@ -33,22 +32,15 @@ public class RandomMove extends Move {
     // 1.1 实例编码: 值随机
     public static Move move(DecisionEntity decisionEntity, String name) {
         List optionalVariableList = decisionEntity.getOptionalDecisionVariableList(name);    // 1. 获取其值域
-        if(optionalVariableList.size() == 0) {
-            return null; // 值域为空
-        }
-        Object newVariable = new Object();
-        try {
-            if(decisionEntity.getClass().getDeclaredField(name).getAnnotation(DecisionVariable.class).nullable()) {
-                double probability = decisionEntity.getClass().getDeclaredField(name).getAnnotation(DecisionVariable.class).probability();
-                newVariable = Tool.randomFromNullableList(optionalVariableList, probability);// 2. 如果变量可空
-            } else {
-                newVariable = Tool.randomFromList(optionalVariableList);                     // 3. 如果变量不可空
-            }
-        } catch (NoSuchFieldException e) {
-            e.printStackTrace();
-        }
-        Move move = move(decisionEntity, name, newVariable);
-        return move;
+        if(optionalVariableList.isEmpty()) { return null;}
+        Object oldVariable = decisionEntity.getDecisionVariable(name);
+//        Object newVariable = new Object();
+//        if (index + 1 < optionalVariableList.size()) {
+//            newVariable = optionalVariableList.get(index + 1);
+//        } else newVariable = optionalVariableList.get(0);
+//        int index = optionalVariableList.indexOf(oldVariable);
+        Object newVariable = Tool.nextFromList(optionalVariableList, oldVariable);
+        return move(decisionEntity, name, newVariable);
         // return new RandomMove().transfer(move);                                              // 4. 转为RandomMove类, 便于后续统计
     }
 
@@ -106,5 +98,5 @@ public class RandomMove extends Move {
         return move;
     }
 
-/* class ends */
+    /* class ends */
 }
