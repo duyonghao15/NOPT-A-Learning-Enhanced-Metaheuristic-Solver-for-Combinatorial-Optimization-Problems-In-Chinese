@@ -149,7 +149,7 @@ NOPT选择Apache 2.0 协议，所有用户应在该许可证的规范下使用NO
 联系方式：13272400834  / duyonghao15@163.com \
 通讯地址：湖南省长沙市开福区国防科技大学系统工程学院，410072
 
-<img src="./README/联系方式.png"  width="500" />
+<img src="./README/联系方式.jpg"  width="500" />
 
 ### 🎓 参考文献 (References)
 - [1] Du Y, Wang T, Xin B, et al. A data-driven parallel scheduling approach for multiple agile earth observation satellites [J]. IEEE Transactions on Evolutionary Computation, 2020, 24(4): 679–693.
