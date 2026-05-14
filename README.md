@@ -157,3 +157,4 @@ NOPT选择Apache 2.0 协议，所有用户应在该许可证的规范下使用NO
 - [3] Yao F, Du Y, Li L, et al. General modeling and optimization technique for real-world earth observation satellite scheduling [J]. Frontiers of Engineering Management, 2023, 10(4): 695-709.
 - [4] Chen M, Du Y, Tang K, et al. Learning to construct a solution for the agile satellite scheduling problem with time-dependent transition times [J]. IEEE Transactions on Systems, Man, and Cybernetics: Systems, 2024, 54(10): 5949-5963.
 - [5] Du Y H, Wang L, Xing L N, Yan J G, Cai M S. Data-driven heuristic assisted memetic algorithm for efficient inter-satellite link scheduling in the BeiDou Navigation Satellite System [J]. IEEE/CAA Journal of Automatica Sinica, 2021, 8(11): 1800-1816.
+- [6] 杜永浩, 黎磊, 徐世龙, 等. 基于智能优化算法引擎的可演进星群智能任务规划[J]. 电子与信息学报, 2025, 47(6): 1645-1657.
