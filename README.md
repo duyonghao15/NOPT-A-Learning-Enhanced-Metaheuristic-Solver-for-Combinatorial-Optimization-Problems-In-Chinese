@@ -14,7 +14,7 @@
 >- 📊 General heuristic/metaheuristic algorithm library + built-in visualization tools
 
 ### 💡 什么是NOPT？(What is NOPT?)
-NOPT是一款可求解多类型优化问题的工程级组合优化求解器，集成了10大经典优化问题与超10种工程问题。NOPT用户定位广泛，包括高校学生、管理运筹业务部门，研发部门等。
+NOPT是一款可求解多类型优化问题的学习增强型组合优化求解器，集成了10大经典优化问题与超10种工程问题。NOPT用户定位广泛，包括高校学生、管理运筹业务部门，研发部门等。
 
 >NOPT is an engineering-grade combinatorial optimization solver capable of solving multiple types of optimization problems. It integrates 10 classic optimization problems and over 10 engineering problems. NOPT targets a wide range of users, including university students, operations research departments in management, and R&D departments.
 
